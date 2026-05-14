@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="id">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Agenda Tahunan - PTQ Dzu Nurain</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap');
+
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+
+            .font-serif {
+                font-family: 'Playfair Display', serif;
+            }
+        </style>
+    </head>
+
+    <body class="bg-black text-white">
+
+        <nav class="bg-slate-900 border-b-2 border-[#D4AF37] sticky top-0 z-50 shadow-2xl">
+            <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div
+                        class="w-12 h-12 bg-black border border-[#D4AF37] rounded-full flex items-center justify-center shadow-[0_0_10px_rgba(212,175,55,0.3)]">
+                        <img src="logo.png" alt="LOGO">
+                    </div>
+                    <div>
+                        <h1 class="text-[#D4AF37] font-serif font-bold text-xl leading-none">DZU NURAIN</h1>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.3em] mt-1">KOLAKA Timur</p>
+                    </div>
+                </div>
+
+                <ul class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest">
+                    <li><a href="index.html" class="hover:text-[#D4AF37] transition duration-300">Beranda</a></li>
+                    <li><a href="program.html" class="hover:text-[#D4AF37] transition duration-300">Program</a></li>
+                    <li><a href="jadwal.html" class="hover:text-[#D4AF37] transition duration-300">Jadwal</a></li>
+                    <li><a href="#" class="text-[#D4AF37] border-b border-[#D4AF37] pb-1">Agenda</a></li>
+                    <li><a href="data_santri.html" class="hover:text-[#D4AF37] transition duration-300">Data Santri</a>
+                    </li>
+                </ul>
+
+                <div class="hidden md:block">
+                    <button
+                        class="bg-[#D4AF37] text-black px-6 py-2 rounded-full text-xs font-bold uppercase hover:bg-white transition duration-500 shadow-lg">
+                        INFO PENDAFARAN
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="max-w-6xl mx-auto py-16 px-6">
+            <div class="mb-12 text-center md:text-left">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Agenda <span
+                        class="text-[#D4AF37]">Tahunan</span></h2>
+                <div class="h-1 w-20 bg-[#D4AF37] mb-6 mx-auto md:mx-0"></div>
+                <p class="text-gray-400 max-w-2xl leading-relaxed">Rencana kegiatan strategis Pondok Tahfidzul Qur'an
+                    Dzu Nurain selama satu tahun ajaran, mencakup kegiatan akademik, tahfidz, dan pengembangan karakter.
+                </p>
+            </div>
+
+            <div
+                class="bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl backdrop-blur-sm">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-900 border-b border-[#D4AF37]/30">
+                                <th class="p-6 text-[#D4AF37] uppercase text-xs tracking-widest font-bold">Bulan
+                                    (Hijriyah/Masehi)</th>
+                                <th class="p-6 text-[#D4AF37] uppercase text-xs tracking-widest font-bold">Program /
+                                    Kegiatan</th>
+                                <th class="p-6 text-[#D4AF37] uppercase text-xs tracking-widest font-bold">Output</th>
+                                <th class="p-6 text-[#D4AF37] uppercase text-xs tracking-widest font-bold font-light">
+                                    Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-[#D4AF37]/5 transition duration-300">
+                                <td class="p-6">
+                                    <div class="text-sm font-bold text-white">Muharram</div>
+                                    <div class="text-xs text-blue-400 uppercase tracking-tighter">Juli</div>
+                                </td>
+                                <td class="p-6">
+                                    <div class="text-white font-semibold">Penyambutan Santri Baru</div>
+                                </td>
+                                <td class="p-6">
+                                    <span
+                                        class="bg-emerald-900/30 text-emerald-400 text-[10px] px-3 py-1 rounded-full border border-emerald-800 uppercase font-bold">Santri
+                                        Siap Masuk</span>
+                                </td>
+                                <td class="p-6 text-sm text-gray-400">Orientasi, adab, pembagian kamar</td>
+                            </tr>
+                            <tr class="hover:bg-[#D4AF37]/5 transition duration-300">
+                                <td class="p-6">
+                                    <div class="text-sm font-bold text-white">Shafar</div>
+                                    <div class="text-xs text-blue-400 uppercase tracking-tighter">Agustus</div>
+                                </td>
+                                <td class="p-6 text-white font-semibold">Mulai KBM & Tahfidz Aktif</td>
+                                <td class="p-6">
+                                    <span
+                                        class="bg-blue-900/30 text-blue-300 text-[10px] px-3 py-1 rounded-full border border-blue-800 uppercase font-bold">Program
+                                        Berjalan</span>
+                                </td>
+                                <td class="p-6 text-sm text-gray-400">Setoran, murojaah, disiplin harian</td>
+                            </tr>
+                            <tr class="hover:bg-[#D4AF37]/5 transition duration-300">
+                                <td class="p-6">
+                                    <div class="text-sm font-bold text-white">Rabiul Awal</div>
+                                    <div class="text-xs text-blue-400 uppercase tracking-tighter">September</div>
+                                </td>
+                                <td class="p-6 text-white font-semibold text-[#D4AF37]">Evaluasi Hafalan per Juz</td>
+                                <td class="p-6">
+                                    <span
+                                        class="bg-amber-900/30 text-[#D4AF37] text-[10px] px-3 py-1 rounded-full border border-[#D4AF37]/30 uppercase font-bold">Nilai
+                                        Hafalan</span>
+                                </td>
+                                <td class="p-6 text-sm text-gray-400">Tasmi' dan ujian 1 juz</td>
+                            </tr>
+                            <tr class="hover:bg-[#D4AF37]/5 transition duration-300">
+                                <td class="p-6">
+                                    <div class="text-sm font-bold text-white">Jumadil Akhir</div>
+                                    <div class="text-xs text-blue-400 uppercase tracking-tighter">Desember</div>
+                                </td>
+                                <td class="p-6 text-white font-semibold">Qur'an Camp</td>
+                                <td class="p-6">
+                                    <span
+                                        class="bg-purple-900/30 text-purple-400 text-[10px] px-3 py-1 rounded-full border border-purple-800 uppercase font-bold">Motivasi
+                                        Hafalan</span>
+                                </td>
+                                <td class="p-6 text-sm text-gray-400">Kemah, tadabbur, agenda luar ruang</td>
+                            </tr>
+                            <tr class="hover:bg-[#D4AF37]/5 transition duration-300">
+                                <td class="p-6">
+                                    <div class="text-sm font-bold text-white">Ramadhan</div>
+                                    <div class="text-xs text-blue-400 uppercase tracking-tighter">Maret</div>
+                                </td>
+                                <td class="p-6 text-white font-semibold text-[#D4AF37]">Dauroh Al-Qur'an</td>
+                                <td class="p-6">
+                                    <span
+                                        class="bg-red-900/30 text-red-400 text-[10px] px-3 py-1 rounded-full border border-red-800 uppercase font-bold">Target
+                                        Intensif</span>
+                                </td>
+                                <td class="p-6 text-sm text-gray-400">Qiyam, setoran ekstra, kajian</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl">
+                    <div class="text-[#D4AF37] font-bold text-2xl mb-1">Semester 1</div>
+                    <p class="text-gray-500 text-xs uppercase tracking-widest">Fokus: Adaptasi & Dasar Tahfidz</p>
+                </div>
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl">
+                    <div class="text-[#D4AF37] font-bold text-2xl mb-1">Semester 2</div>
+                    <p class="text-gray-500 text-xs uppercase tracking-widest">Fokus: Akselerasi & Murojaah</p>
+                </div>
+                <div class="p-6 bg-[#D4AF37] rounded-xl text-black">
+                    <div class="font-bold text-2xl mb-1 italic">Wisuda Akbar</div>
+                    <p class="text-black/60 text-xs uppercase font-bold tracking-widest">Puncak Agenda Tahunan</p>
+                </div>
+            </div>
+        </main>
+
+    </body>
+
+    </html>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="id">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Jadwal Harian - PTQ Dzu Nurain</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap');
+
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+
+            .font-serif {
+                font-family: 'Playfair Display', serif;
+            }
+
+            /* Custom scrollbar untuk tema gelap */
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: #0f172a;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #D4AF37;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+
+    <body class="bg-black text-white">
+
+        <nav class="bg-slate-900 border-b-2 border-[#D4AF37] sticky top-0 z-50 shadow-2xl">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div
+                        class="w-12 h-12 bg-black border border-[#D4AF37] rounded-full flex items-center justify-center shadow-[0_0_10px_rgba(212,175,55,0.3)]">
+                        <img src="logo.png" alt="LOGO">
+                    </div>
+                    <div>
+                        <h1 class="text-[#D4AF37] font-serif font-bold text-xl leading-none">DZU NURAIN</h1>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-[0.3em] mt-1">KOLAKA Timur</p>
+                    </div>
+                </div>
+
+                <ul class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest">
+                    <li><a href="index.html" class="hover:text-[#D4AF37] transition duration-300">Beranda</a></li>
+                    <li><a href="program.html" class="hover:text-[#D4AF37] transition duration-300">Program</a></li>
+                    <li><a href="#" class="text-[#D4AF37] border-b border-[#D4AF37] pb-1">Jadwal</a></li>
+                    <li><a href="agenda.html" class="hover:text-[#D4AF37] transition duration-300">Agenda</a></li>
+                    <li><a href="data_santri.html" class="hover:text-[#D4AF37] transition duration-300">INFO
+                            PENDAFTARAN</a>
+                    </li>
+                </ul>
+
+                <div class="hidden md:block">
+                    <button
+                        class="bg-[#D4AF37] text-black px-6 py-2 rounded-full text-xs font-bold uppercase hover:bg-white transition duration-500 shadow-lg">
+                        INFO PENDAFARAN
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <main class="max-w-5xl mx-auto py-12 px-6">
+            <div class="mb-10">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-2 uppercase">Rutinitas
+                    <span class="text-[#D4AF37]">Harian</span>
+                </h2>
+                <p class="text-gray-400 text-sm">Membentuk karakter disiplin dan spiritual melalui jadwal yang
+                    terstruktur dari bangun tidur hingga istirahat kembali.</p>
+            </div>
+
+            <div
+                class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-black border-b border-[#D4AF37]">
+                                <th class="p-5 text-[#D4AF37] uppercase text-xs tracking-widest font-bold">Waktu</th>
+                                <th class="p-5 text-[#D4AF37] uppercase text-xs tracking-widest font-bold">Kegiatan</th>
+                                <th class="p-5 text-[#D4AF37] uppercase text-xs tracking-widest font-bold">Fokus</th>
+                                <th class="p-5 text-[#D4AF37] uppercase text-xs tracking-widest font-bold font-light">
+                                    Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-5 text-sm font-mono text-blue-400">04:00 - 05:45</td>
+                                <td class="p-5 font-semibold">Qiyamul Lail & Subuh</td>
+                                <td class="p-5"><span
+                                        class="bg-blue-900/30 text-blue-300 text-[10px] px-2 py-1 rounded uppercase font-bold">Ibadah</span>
+                                </td>
+                                <td class="p-5 text-sm text-gray-400">Shalat malam, dzikir, dan jamaah</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 transition bg-slate-800/10">
+                                <td class="p-5 text-sm font-mono text-blue-400">05:45 - 06:45</td>
+                                <td class="p-5 font-semibold">Setoran Hafalan</td>
+                                <td class="p-5"><span
+                                        class="bg-amber-900/30 text-[#D4AF37] text-[10px] px-2 py-1 rounded uppercase font-bold">Tahfidz</span>
+                                </td>
+                                <td class="p-5 text-sm text-gray-400">Ziyadah harian bersama Musyrif</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-5 text-sm font-mono text-blue-400">07:30 - 11:30</td>
+                                <td class="p-5 font-semibold">KBM / Pelajaran</td>
+                                <td class="p-5"><span
+                                        class="bg-emerald-900/30 text-emerald-400 text-[10px] px-2 py-1 rounded uppercase font-bold">Akademik</span>
+                                </td>
+                                <td class="p-5 text-sm text-gray-400">Pelajaran umum dan diniyah</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 transition bg-slate-800/10">
+                                <td class="p-5 text-sm font-mono text-blue-400">11:30 - 14:30</td>
+                                <td class="p-5 font-semibold">Istirahat & Murojaah</td>
+                                <td class="p-5"><span
+                                        class="bg-blue-900/30 text-blue-300 text-[10px] px-2 py-1 rounded uppercase font-bold">Ibadah</span>
+                                </td>
+                                <td class="p-5 text-sm text-gray-400">Dzuhur, makan, dan penguatan hafalan</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-5 text-sm font-mono text-blue-400">14:30 - 17:00</td>
+                                <td class="p-5 font-semibold">Olahraga & Belajar Sore</td>
+                                <td class="p-5"><span
+                                        class="bg-rose-900/30 text-rose-400 text-[10px] px-2 py-1 rounded uppercase font-bold">Kesehatan</span>
+                                </td>
+                                <td class="p-5 text-sm text-gray-400">Olahraga terjadwal dan tugas mandiri</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40 transition bg-slate-800/10">
+                                <td class="p-5 text-sm font-mono text-blue-400">18:00 - 20:00</td>
+                                <td class="p-5 font-semibold">Halaqah Maghrib & Isya</td>
+                                <td class="p-5"><span
+                                        class="bg-amber-900/30 text-[#D4AF37] text-[10px] px-2 py-1 rounded uppercase font-bold">Tahfidz</span>
+                                </td>
+                                <td class="p-5 text-sm text-gray-400">Tilawah dan materi akhlak/fiqih</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mt-8 flex items-center space-x-2 text-xs text-gray-500 italic">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-[#D4AF37]" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Jadwal dapat berubah sewaktu-waktu sesuai kebijakan pengasuh pondok.</span>
+            </div>
+        </main>
+
+    </body>
+
+    </html>
+</body>
+
+</html>

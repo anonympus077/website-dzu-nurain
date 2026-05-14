@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Program Tahfidz - Dzu Nurain</title>
+</head>
+
+<body class="bg-black text-white font-sans">
+
+    <nav class="bg-slate-900 border-b-2 border-[#D4AF37] sticky top-0 z-50 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div
+                    class="w-12 h-12 bg-black border border-[#D4AF37] rounded-full flex items-center justify-center shadow-[0_0_10px_rgba(212,175,55,0.3)]">
+                    <img src="logo.png" alt="LOGO">
+                </div>
+                <div>
+                    <h1 class="text-[#D4AF37] font-serif font-bold text-xl leading-none">DZU NURAIN</h1>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-[0.3em] mt-1">KOLAKA Timur</p>
+                </div>
+            </div>
+
+            <ul class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest">
+                <li><a href="index.html" class="hover:text-[#D4AF37] transition duration-300">Beranda</a></li>
+                <li><a href="#" class="text-[#D4AF37] border-b border-[#D4AF37] pb-1">Program</a></li>
+                <li><a href="jadwal.html" class="hover:text-[#D4AF37] transition duration-300">Jadwal</a></li>
+                <li><a href="agenda.html" class="hover:text-[#D4AF37] transition duration-300">Agenda</a></li>
+                <li><a href="data_santri.html" class="hover:text-[#D4AF37] transition duration-300">Data Santri</a></li>
+            </ul>
+
+            <div class="hidden md:block">
+                <button
+                    class="bg-[#D4AF37] text-black px-6 py-2 rounded-full text-xs font-bold uppercase hover:bg-white transition duration-500 shadow-lg">INFO
+                    PENDAFTARAN
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto py-16 px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-white text-4xl font-serif font-bold mb-2 uppercase tracking-tight">Kurikulum & <span
+                    class="text-[#D4AF37]">Pembinaan</span></h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">Sistem pendidikan tahfidz terukur untuk mencetak hafidz yang
+                mutqin, beradab, dan berwawasan akademik.</p>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-slate-700 shadow-2xl">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-slate-900 text-[#D4AF37] uppercase text-xs tracking-widest">
+                        <th class="p-5 border-b border-slate-700">Waktu</th>
+                        <th class="p-5 border-b border-slate-700">Kegiatan</th>
+                        <th class="p-5 border-b border-slate-700">Target</th>
+                        <th class="p-5 border-b border-slate-700">Penanggung Jawab</th>
+                        <th class="p-5 border-b border-slate-700">Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800 bg-slate-900/30">
+                    <tr class="hover:bg-slate-800/50 transition duration-300">
+                        <td class="p-5 font-bold text-blue-400">Harian</td>
+                        <td class="p-5 text-white font-medium">Setoran Hafalan</td>
+                        <td class="p-5 text-gray-300 italic">1-2 Halaman</td>
+                        <td class="p-5 text-gray-400">Musyrif Halaqah</td>
+                        <td class="p-5 text-xs text-gray-500">Dilaksanakan setelah Subuh / pagi</td>
+                    </tr>
+                    <tr class="hover:bg-slate-800/50 transition duration-300">
+                        <td class="p-5 font-bold text-blue-400">Harian</td>
+                        <td class="p-5 text-white font-medium">Murojaah</td>
+                        <td class="p-5 text-gray-300 italic">Minimal 1 Juz</td>
+                        <td class="p-5 text-gray-400">Santri & Musyrif</td>
+                        <td class="p-5 text-xs text-gray-500">Wajib dan dicatat</td>
+                    </tr>
+                    <tr class="hover:bg-slate-800/50 transition duration-300">
+                        <td class="p-5 font-bold text-blue-400">Harian</td>
+                        <td class="p-5 text-white font-medium">Tahsin / Talaqqi</td>
+                        <td class="p-5 text-gray-300 italic">Makhraj & Tajwid</td>
+                        <td class="p-5 text-gray-400">Ustadz</td>
+                        <td class="p-5 text-xs text-gray-500">Fokus kualitas bacaan</td>
+                    </tr>
+                    <tr class="hover:bg-slate-800/50 transition duration-300">
+                        <td class="p-5 font-bold text-purple-400">Pekanan</td>
+                        <td class="p-5 text-white font-medium text-[#D4AF37]">Tasmi' per Halaqah</td>
+                        <td class="p-5 text-gray-300 italic">1 Juz</td>
+                        <td class="p-5 text-gray-400">Koordinator Tahfidz</td>
+                        <td class="p-5 text-xs text-gray-500">Dilaksanakan terjadwal</td>
+                    </tr>
+                    <tr class="hover:bg-slate-800/50 transition duration-300">
+                        <td class="p-5 font-bold text-red-400">Bulanan</td>
+                        <td class="p-5 text-white font-medium">Ujian Hafalan</td>
+                        <td class="p-5 text-gray-300 italic">1 Juz</td>
+                        <td class="p-5 text-gray-400">Bidang Tahfidz</td>
+                        <td class="p-5 text-xs text-gray-500">Skor masuk laporan bulanan</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+
+</html>
