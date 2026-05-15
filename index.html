@@ -19,24 +19,24 @@
 
 <body>
     <header
-        class="md:w-full md:h-[60vh] bg-gradient-to-b from-black via-[#05080f] to-slate-900 flex flex-col relative border-b-4 border-[#D4AF37]">
+        class="w-full h-[60vh] bg-gradient-to-b from-black via-[#05080f] to-slate-900 flex flex-col relative border-b-4 border-[#D4AF37]">
 
         <div class="pt-12 pl-12 flex items-center">
-            <img src="logo.png" alt="Logo" class="md:w-52 md:h-52 object-contain">
+            <img src="logo.png" alt="Logo" class="w-52 h-52 object-contain">
 
             <div class="ml-10 text-left">
                 <!-- <h1 class="font-sans font-extrabold uppercase tracking-tighter text-[#D4AF37] text-4xl md:text-5xl leading-tight italic"> -->
-                <h1 class="text-[#D4AF37] md:text-5xl font-bold uppercase tracking-tighter leading-none">
+                <h1 class="text-[#D4AF37] text-5xl font-bold uppercase tracking-tighter leading-none">
                     SELAMAT DATANG DI WEBSITE RESMI<br>
                     PONDOK TAHFIDZ QUR'AN DZU NURAIN
                 </h1>
-                <p class="text-gray-400 md:text-xl uppercase tracking-[0.5em] mt-4 font-semibold">
+                <p class="text-gray-400 text-xl uppercase tracking-[0.5em] mt-4 font-semibold">
                     KOLAKA TIMUR
                 </p>
             </div>
         </div>
 
-        <nav class="md:mt-20 w-full flex justify-center text-white">
+        <nav class="mt-20 w-full flex justify-center text-white">
             <ul class="flex space-x-12 text-lg font-bold uppercase tracking-widest">
                 <li><a href="#" class="text-[#D4AF37] border-b border-[#D4AF37] pb-1">Beranda</a></li>
                 <li><a href="program.html" class="hover:text-[#D4AF37] transition duration-300">Program</a></li>
@@ -48,22 +48,28 @@
         </nav>
 
     </header>
-    <section class="bg-black py-20 px-12">
-        <div class="max-w-6xl mx-auto">
+    <section class="bg-black py-12 md:py-20 px-6 md:px-12">
+        <div class="max-w-4xl mx-auto">
             <h3
-                class="font-sans font-extrabold text-[#D4AF37] text-4xl md:text-5xl uppercase italic mb-8 tracking-tighter">
-                Membangun Masa Depan Bersama Al-Qur'an
+                class="font-sans font-extrabold text-[#D4AF37] text-3xl md:text-6xl uppercase italic mb-10 tracking-tighter leading-none text-center md:text-left">
+                Membangun Masa Depan <br class="hidden md:block"> Bersama Al-Qur'an
             </h3>
 
-            <div class="mb-12">
-                <img src="foto-kegiatan.jpg" alt="Kegiatan Santri"
-                    class="w-full h-[500px] object-cover rounded-sm border border-gray-800">
-                <p class="text-sm text-gray-500 mt-3 italic text-center">Suasana belajar santri dalam menjaga hafalan di
-                    waktu fajar.</p>
+            <div class="mb-14 group">
+                <div class="relative">
+                    <img src="foto-kegiatan.jpg" alt="Kegiatan Santri"
+                        class="w-full h-72 md:h-[500px] object-cover rounded-sm border border-gray-800 group-hover:border-[#D4AF37] transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                </div>
+                <p class="text-xs md:text-sm text-gray-500 mt-4 italic text-center tracking-wide">
+                    Suasana belajar santri dalam menjaga hafalan di waktu fajar.
+                </p>
             </div>
 
-            <div class="font-sans text-white space-y-6 text-lg leading-relaxed text-justify">
-                <p>
+            <div class="font-sans text-gray-200 space-y-8 text-lg md:text-xl leading-relaxed text-justify">
+
+                <p
+                    class="first-letter:text-5xl first-letter:font-bold first-letter:text-[#D4AF37] first-letter:mr-3 first-letter:float-left">
                     Di tengah derasnya arus modernisasi, menjaga identitas sebagai generasi Qur'ani adalah sebuah
                     tantangan sekaligus kemuliaan. <span class="text-[#D4AF37] font-semibold">Pondok Tahfidz Qur'an Dzu
                         Nurain</span> hadir bukan sekadar sebagai tempat menghafal, melainkan sebagai rumah bagi
@@ -72,21 +78,25 @@
 
                 <p>
                     Terletak di jantung keasrian Kolaka Timur, kami percaya bahwa lingkungan memiliki peran vital dalam
-                    proses *talaqqi*. Jauh dari hiruk-pikuk perkotaan, setiap santri dibimbing untuk tidak hanya
+                    proses <span class="italic text-[#D4AF37]">talaqqi</span>. Jauh dari hiruk-pikuk perkotaan, setiap
+                    santri dibimbing untuk tidak hanya
                     menghafalkan huruf demi huruf, tetapi juga meresapi makna dan adab yang terkandung di dalamnya.
                     Program kami dirancang secara progresif—mengikuti perkembangan zaman tanpa meninggalkan tradisi
                     keilmuan Islam yang murni.
                 </p>
 
-                <div class="md:float-right md:ml-8 mb-6 w-full md:w-1/2">
+                <div class="md:float-right md:ml-10 md:mb-6 w-full md:w-5/12 group">
                     <img src="foto-ustadz.jpg" alt="Bimbingan"
-                        class="w-full h-64 object-cover rounded-sm border border-[#D4AF37]/30">
+                        class="w-full h-64 md:h-80 object-cover rounded-lg border-2 border-[#D4AF37]/20 group-hover:border-[#D4AF37] transition duration-500 shadow-xl shadow-[#D4AF37]/5">
+                    <p class="text-[10px] uppercase tracking-widest text-gray-600 mt-2 text-center md:text-right">
+                        Bimbingan Intensif</p>
                 </div>
 
                 <p>
                     Metode yang kami terapkan mengedepankan kualitas daripada sekadar kuantitas. Melalui sistem setoran
                     yang terukur dan murojaah yang ketat, kami berupaya melahirkan para penghafal Al-Qur'an yang
-                    *Mutqin*. Fokus kami adalah mencetak lulusan yang tidak hanya cerdas secara intelektual, tetapi juga
+                    <span class="italic border-b border-[#D4AF37]/50">Mutqin</span>. Fokus kami adalah mencetak lulusan
+                    yang tidak hanya cerdas secara intelektual, tetapi juga
                     memiliki integritas moral yang kokoh untuk menjadi pemimpin di masa depan.
                 </p>
 
@@ -96,40 +106,12 @@
                     hingga mereka siap bersinar menerangi umat.
                 </p>
             </div>
-        </div>
-        <div class="text-left mb-16">
-            <h2 class="font-sans font-extrabold text-[#D4AF37] text-4xl uppercase italic tracking-tighter">
-                Mengapa Dzu Nurain?
-            </h2>
-            <div class="w-20 h-1 bg-[#D4AF37] mt-4"></div>
-        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-            <div class="bg-slate-900/40 p-8 border border-gray-800 hover:border-[#D4AF37] transition duration-500">
-                <img src="foto-santri.jpg" alt="Metode Hafalan"
-                    class="w-full h-48 object-cover mb-6 grayscale hover:grayscale-0 transition duration-500">
-                <h3 class="text-white text-xl font-bold mb-3 uppercase">Metode Terukur</h3>
-                <p class="text-gray-400 leading-relaxed">Fokus pada kualitas hafalan (Mutqin) dengan bimbingan intensif
-                    setiap harinya.</p>
+            <div class="flex items-center justify-center space-x-4 my-20">
+                <div class="h-[1px] w-full bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+                <div class="text-[#D4AF37] text-2xl">❖</div>
+                <div class="h-[1px] w-full bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
             </div>
-
-            <div class="bg-slate-900/40 p-8 border border-gray-800 hover:border-[#D4AF37] transition duration-500">
-                <img src="foto-pondok.jpg" alt="Fasilitas"
-                    class="w-full h-48 object-cover mb-6 grayscale hover:grayscale-0 transition duration-500">
-                <h3 class="text-white text-xl font-bold mb-3 uppercase">Lingkungan Asri</h3>
-                <p class="text-gray-400 leading-relaxed">Terletak di wilayah yang tenang, jauh dari kebisingan kota,
-                    ideal untuk menghafal.</p>
-            </div>
-
-            <div class="bg-slate-900/40 p-8 border border-gray-800 hover:border-[#D4AF37] transition duration-500">
-                <img src="foto-guru.jpg" alt="Pengajar"
-                    class="w-full h-48 object-cover mb-6 grayscale hover:grayscale-0 transition duration-500">
-                <h3 class="text-white text-xl font-bold mb-3 uppercase">Pembimbing Sanad</h3>
-                <p class="text-gray-400 leading-relaxed">Dibimbing oleh ustadz berpengalaman yang menjaga tradisi
-                    keilmuan Al-Qur'an.</p>
-            </div>
-
         </div>
     </section>
     <footer class="bg-[#05080f] border-t border-gray-800 pt-16 pb-8">
