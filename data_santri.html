@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-s    <title>Data Santri - Manajemen Peserta Didik</title>
+    <title>Data Santri - Manajemen Peserta Didik</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap');
@@ -19,202 +19,165 @@ s    <title>Data Santri - Manajemen Peserta Didik</title>
     </style>
 </head>
 
-<body class="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 min-h-screen">
-    <nav class="bg-gradient-to-r from-gray-300 to-gray-400 border-b-2 border-[#1e4680] sticky top-0 z-50 shadow-2xl">
-        <div class="max-w-7xl mx-auto px-6 py-4 md:h-24 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="flex items-center space-x-4">
-                <div
-                    class="w-12 h-12 bg-white border border-[#D4AF37] rounded-full flex items-center justify-center shadow-[0_0_10px_rgba(212,175,55,0.3)]">
-                    <img src="logo.png" alt="LOGO" class="w-8 h-8 object-contain">
-                </div>
-                <div>
-                    <h1 class="text-[#D4AF37] font-serif font-bold text-xl leading-none">DZU NURAIN</h1>
-                    <p class="text-[10px] text-gray-400 uppercase tracking-[0.3em] mt-1">KOLAKA Timur</p>
-                </div>
-            </div>
-
-            <ul class="flex flex-nowrap justify-center gap-3 md:gap-8 text-[10px] md:text-sm font-semibold uppercase tracking-widest text-[#D4AF37]">
-                <li><a href="index.html" class="hover:text-white transition duration-300">Beranda</a></li>
-                <li><a href="program.html" class="hover:text-white transition duration-300">Program</a></li>
-                <li><a href="jadwal.html" class="hover:text-white transition duration-300">Jadwal</a></li>
-                <li><a href="agenda.html" class="hover:text-white transition duration-300">Agenda</a></li>
-                <li><a href="#" class="text-[#D4AF37] border-b border-[#D4AF37] pb-1">Data Santri</a></li>
-            </ul>
-
-            <div class="hidden md:block">
-                <button
-                    class="bg-[#1e4680] text-white px-6 py-2 rounded-full text-xs font-bold uppercase hover:bg-gray-700 transition duration-500 shadow-lg">
-                    INFO PENDAFTARAN
-                </button>
-            </div>
-        </div>
-    </nav>
-
+<body class="bg-gradient-to-b from-black-100 via-black-200 to-black-300 min-h-screen pb-28">
     <!-- Password Modal -->
     <div id="passwordModal" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-50">
         <div class="bg-white rounded-lg shadow-2xl p-6 md:p-10 w-[90%] max-w-md">
             <h2 class="text-2xl md:text-3xl font-bold text-[#1e4680] mb-2">🔐 Verifikasi Password</h2>
-            <p class="text-gray-600 mb-8">Masukkan password untuk mengubah data santri</p>
+            <p class="text-black-600 mb-8">Masukkan password untuk mengubah data santri</p>
             <div class="space-y-4">
                 <input type="password" id="passwordInput" placeholder="Masukkan password..." 
-                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37]">
+                    class="w-full px-4 py-3 border-2 border-black-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37]">
                 <div id="passwordError" class="text-red-600 text-sm font-semibold hidden">❌ Password salah. Silakan coba lagi.</div>
                 <button onclick="checkPassword()" 
                     class="w-full bg-[#D4AF37] hover:bg-yellow-500 text-[#1e4680] font-bold py-3 rounded-lg transition">
                     Verifikasi
                 </button>
          `       <button onclick="closePasswordModal()" 
-                    class="w-full bg-gray-400 hover:bg-gray-500 text-white font-semibold py-3 rounded-lg transition">
+                    class="w-full bg-black-400 hover:bg-black-500 text-white font-semibold py-3 rounded-lg transition">
                     Batal
                 </button>
             </div>
-            <p class="text-center text-gray-500 text-xs mt-6">Password: <span class="bg-gray-100 px-2 py-1 rounded font-mono text-[#1e4680]">Santri2026!</span></p>
+            <p class="text-center text-black-500 text-xs mt-6">Password: <span class="bg-black-100 px-2 py-1 rounded font-mono text-[#1e4680]">Santri2026!</span></p>
         </div>
     </div>
 
     <div class="container mx-auto px-4 py-12">
         <!-- Header -->
-        <div class="mb-8">
-            <h1 class="text-2xl md:text-4xl font-bold text-[#1e4680] mb-2 uppercase text-center md:text-left">📋 Manajemen Data Santri</h1>
-            <p class="text-gray-700 text-base md:text-lg text-center md:text-left">Sistem informasi peserta didik terintegrasi</p>
+        <div class="mb-8 justify-center">
+            <h1 class="text-black-800 text-4xl text-center font-serif font-bold mb-2 uppercase tracking-tight">Data Santri</h1>
+            <p class="text-black-700 text-base md:text-lg text-center md:text-left">Sistem informasi peserta didik terintegrasi</p>
         </div>
 
-        <!-- Tabel 1: Data Santri (Display Only) -->
+        <nav class="fixed bottom-0 left-0 right-0 z-50 bg-black-900 text-black-200 border-t border-black-800">
+                <div class="max-w-6xl mx-auto px-4">
+                    <ul class="flex justify-between items-center">
+                        <li class="flex-1 text-center">
+                            <a href="index.html" class="flex flex-col items-center justify-center py-3">
+                                <span class="text-2xl">🏠</span>
+                                <span class="text-[11px] mt-1">Beranda</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 text-center">
+                            <a href="program.html" class="flex flex-col items-center justify-center py-3">
+                                <span class="text-2xl">🎓</span>
+                                <span class="text-[11px] mt-1">Program</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 text-center">
+                            <a href="jadwal.html" class="flex flex-col items-center justify-center py-3">
+                                <span class="text-2xl">🕘</span>
+                                <span class="text-[11px] mt-1">Jadwal</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 text-center">
+                            <a href="agenda.html" class="flex flex-col items-center justify-center py-3">
+                                <span class="text-2xl">🗓️</span>
+                                <span class="text-[11px] mt-1">Agenda</span>
+                            </a>
+                        </li>
+                        <li class="flex-1 text-center">
+                            <a href="#" class="flex flex-col items-center justify-center py-3">
+                                <span class="text-2xl">👥</span>
+                                <span class="text-[11px] mt-1">Data</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        <!-- Tabel Utama: Toggle antara Display dan Input -->
         <div class="bg-white rounded-lg shadow-xl p-8 mb-12 border-t-4 border-[#D4AF37]">
-            <div class="flex items-center justify-between mb-6">
-                <div>
-                    <h2 class="text-3xl font-bold text-[#1e4680] mb-1">📋 Data Santri</h2>
-                    <p class="text-gray-600">Daftar lengkap santri yang terdaftar</p>
+            <!-- DISPLAY MODE -->
+            <div id="displayMode">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <h2 class="text-3xl font-bold text-[#1e4680] mb-1">📊 Data Progress Santri</h2>
+                        <p class="text-black-600">Rekapitulasi progress murajaah dan performa santri</p>
+                    </div>
+                    <span class="bg-green-100 text-green-800 px-6 py-3 rounded-full text-sm font-bold">✓ Publik</span>
                 </div>
-                <span class="bg-green-100 text-green-800 px-6 py-3 rounded-full text-sm font-bold">✓ Publik</span>
-            </div>
-            <div class="overflow-x-auto">
-                <table class="w-full">
-                    <thead>
-                        <tr class="bg-gradient-to-r from-[#1e4680] to-[#2a5ba8] text-white">
-                            <th class="px-6 py-4 text-left font-semibold">No</th>
-                            <th class="px-6 py-4 text-left font-semibold">Nama</th>
-                            <th class="px-6 py-4 text-left font-semibold">Kelas</th>
-                            <th class="px-6 py-4 text-left font-semibold">No. Induk</th>
-                            <th class="px-6 py-4 text-left font-semibold">Tanggal Lahir</th>
-                            <th class="px-6 py-4 text-left font-semibold">Asal Sekolah</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-200">
-                        <tr class="hover:bg-blue-50 transition">
-                            <td class="px-6 py-4 font-semibold text-gray-700">1</td>
-                            <td class="px-6 py-4 text-gray-700" id="nama_1">Ahmad Riza</td>
-                            <td class="px-6 py-4"><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm" id="kelas_1">X-A</span></td>
-                            <td class="px-6 py-4 text-gray-700" id="induk_1">001</td>
-                            <td class="px-6 py-4 text-gray-700" id="tglahir_1">2008-05-10</td>
-                            <td class="px-6 py-4 text-gray-700" id="sekolah_1">SMP Negeri 1</td>
-                        </tr>
-                        <tr class="hover:bg-blue-50 transition">
-                            <td class="px-6 py-4 font-semibold text-gray-700">2</td>
-                            <td class="px-6 py-4 text-gray-700" id="nama_2">Siti Nur Azizah</td>
-                            <td class="px-6 py-4"><span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm" id="kelas_2">X-B</span></td>
-                            <td class="px-6 py-4 text-gray-700" id="induk_2">002</td>
-                            <td class="px-6 py-4 text-gray-700" id="tglahir_2">2008-07-22</td>
-                            <td class="px-6 py-4 text-gray-700" id="sekolah_2">SMP Negeri 2</td>
-                        </tr>
-                        <tr class="hover:bg-blue-50 transition">
-                            <td class="px-6 py-4 font-semibold text-gray-700">3</td>
-                            <td class="px-6 py-4 text-gray-700" id="nama_3">Muhammad Hasan</td>
-                            <td class="px-6 py-4"><span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm" id="kelas_3">X-A</span></td>
-                            <td class="px-6 py-4 text-gray-700" id="induk_3">003</td>
-                            <td class="px-6 py-4 text-gray-700" id="tglahir_3">2008-03-15</td>
-                            <td class="px-6 py-4 text-gray-700" id="sekolah_3">SMP Swasta Al-Ihsan</td>
-                        </tr>
-                        <tr class="hover:bg-blue-50 transition">
-                            <td class="px-6 py-4 font-semibold text-gray-700">4</td>
-                            <td class="px-6 py-4 text-gray-700" id="nama_4">Nur Hidayah</td>
-                            <td class="px-6 py-4"><span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm" id="kelas_4">X-C</span></td>
-                            <td class="px-6 py-4 text-gray-700" id="induk_4">004</td>
-                            <td class="px-6 py-4 text-gray-700" id="tglahir_4">2008-09-30</td>
-                            <td class="px-6 py-4 text-gray-700" id="sekolah_4">SMP Negeri 3</td>
-                        </tr>
-                        <tr class="hover:bg-blue-50 transition">
-                            <td class="px-6 py-4 font-semibold text-gray-700">5</td>
-                            <td class="px-6 py-4 text-gray-700" id="nama_5">Budi Santoso</td>
-                            <td class="px-6 py-4"><span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm" id="kelas_5">X-B</span></td>
-                            <td class="px-6 py-4 text-gray-700" id="induk_5">005</td>
-                            <td class="px-6 py-4 text-gray-700" id="tglahir_5">2008-11-12</td>
-                            <td class="px-6 py-4 text-gray-700" id="sekolah_5">SMP Negeri 4</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="mt-8 flex flex-col md:flex-row gap-4 items-center">
-                <p class="text-gray-600 font-semibold">✓ Total santri: 5 peserta</p>
-                <button onclick="openPasswordModal()" 
-                    class="w-full md:w-auto md:ml-auto bg-[#D4AF37] hover:bg-yellow-500 text-[#1e4680] font-bold py-3 px-8 rounded-lg transition shadow-lg">
-                    ✏️ Edit / Tambah Data
-                </button>
-            </div>
-        </div>
-
-        <!-- Tabel 2: Input Data Santri (Password Protected) -->
-        <div id="inputTable" class="hidden bg-white rounded-lg shadow-xl p-8 border-t-4 border-[#D4AF37]">
-            <div class="flex items-center justify-between mb-8">
-                <div>
-                    <h2 class="text-3xl font-bold text-[#1e4680] mb-1">✏️ Form Edit / Input Data Santri</h2>
-                    <p class="text-gray-600">Edit data santri yang sudah ada atau tambahkan data baru (akses terbatas)</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse border border-black-300">
+                        <thead>
+                            <tr class="bg-gradient-to-r from-[#1e4680] to-[#2a5ba8] text-white">
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">No</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Nama Santri</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Halaqah</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Target Juz</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Realisasi Juz</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Progress</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Nilai Akhir</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Status</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Predikat</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Rekomendasi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabel1Body">
+                            <!-- Data akan ditampilkan oleh JavaScript -->
+                        </tbody>
+                    </table>
                 </div>
-                <span class="bg-red-100 text-red-800 px-6 py-3 rounded-full text-sm font-bold">🔒 Terlindungi</span>
+                <div class="mt-8 flex flex-col md:flex-row gap-4 items-center">
+                    <p class="text-black-600 font-semibold">✓ Total Data: <span id="totalCount">0</span> santri</p>
+                    <button onclick="openPasswordModal()" 
+                        class="w-full md:w-auto md:ml-auto bg-[#D4AF37] hover:bg-yellow-500 text-[#1e4680] font-bold py-3 px-8 rounded-lg transition shadow-lg">
+                        ✏️ Input / Edit Data
+                    </button>
+                </div>
             </div>
 
-            <div class="overflow-x-auto">
-                <table class="w-full">
-                    <thead>
-                        <tr class="bg-gradient-to-r from-[#1e4680] to-[#2a5ba8] text-white">
-                            <th class="px-6 py-4 text-left font-semibold">No</th>
-                            <th class="px-6 py-4 text-left font-semibold">Nama</th>
-                            <th class="px-6 py-4 text-left font-semibold">Kelas</th>
-                            <th class="px-6 py-4 text-left font-semibold">No. Induk</th>
-                            <th class="px-6 py-4 text-left font-semibold">Tanggal Lahir</th>
-                            <th class="px-6 py-4 text-left font-semibold">Asal Sekolah</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-200">
-                        <!-- 10 Baris Input Kosong (Sesuai Sheet 2 target.xlsx) -->
-                        <script>
-                            for (let i = 1; i <= 10; i++) {
-                                document.write(`
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="px-6 py-4"><input type="number" placeholder="${i}" class="w-12 px-2 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"></td>
-                                        <td class="px-6 py-4"><input type="text" placeholder="Nama" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"></td>
-                                        <td class="px-6 py-4">
-                                            <select class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]">
-                                                <option value="">Kelas</option>
-                                                <option>X-A</option><option>X-B</option><option>X-C</option>
-                                                <option>XI-A</option><option>XI-B</option><option>XI-C</option>
-                                                <option>XII-A</option><option>XII-B</option>
-                                            </select>
-                                        </td>
-                                        <td class="px-6 py-4"><input type="text" placeholder="Induk" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"></td>
-                                        <td class="px-6 py-4"><input type="date" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"></td>
-                                        <td class="px-6 py-4"><input type="text" placeholder="Asal Sekolah" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"></td>
-                                    </tr>
-                                `);
-                            }
-                        </script>
-                    </tbody>
-                </table>
-            </div>
+            <!-- INPUT MODE -->
+            <div id="inputMode" class="hidden">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <h2 class="text-3xl font-bold text-[#1e4680] mb-1">✏️ Form Input / Edit Data Progress</h2>
+                        <p class="text-black-600">Input data murajaah santri (akses terbatas dengan password)</p>
+                    </div>
+                    <span class="bg-red-100 text-red-800 px-6 py-3 rounded-full text-sm font-bold">🔒 Terlindungi</span>
+                </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-                <button onclick="saveData()" 
-                    class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg transition shadow-lg">
-                    💾 Simpan Data
-                </button>
-                <button onclick="resetForm()" 
-                    class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 rounded-lg transition shadow-lg">
-                    🔄 Reset Form
-                </button>
-                <button onclick="closeInputTable()" 
-                    class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg transition shadow-lg">
-                    🚪 Tutup
-                </button>
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse border border-black-300">
+                        <thead>
+                            <tr class="bg-gradient-to-r from-[#1e4680] to-[#2a5ba8] text-white">
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">No</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-left font-semibold text-sm">Nama Santri</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-left font-semibold text-sm">Halaqah</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Target Juz</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Realisasi Juz</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Murajaah</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Adab</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Kehadiran</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Status</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-left font-semibold text-sm">Catatan</th>
+                                <th class="border border-black-400/30 px-4 py-2 text-center font-semibold text-sm">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabel2Body">
+                            <!-- Data akan ditampilkan oleh JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-8 bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded mb-8">
+                    <p class="text-yellow-800 text-sm"><strong>⚠️ Catatan:</strong> Tekan <strong>Enter</strong> untuk beralih ke kolom berikutnya. Progress otomatis dihitung. Nilai Akhir = (Murajaah + Adab + Kehadiran) ÷ 3</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <button onclick="addNewRow()" 
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition shadow-lg">
+                        ➕ Tambah Baris
+                    </button>
+                    <button onclick="saveAllData()" 
+                        class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg transition shadow-lg">
+                        💾 Simpan Semua Data
+                    </button>
+                    <button onclick="closeInputMode()" 
+                        class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg transition shadow-lg">
+                        🚪 Batal
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -222,11 +185,14 @@ s    <title>Data Santri - Manajemen Peserta Didik</title>
         <div class="mt-8 bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
             <h3 class="font-bold text-blue-900 mb-3">ℹ️ Cara Penggunaan</h3>
             <ul class="text-blue-800 space-y-2 text-sm">
-                <li>✓ <strong>Tabel Data Santri:</strong> Dapat dilihat oleh semua orang, tidak perlu password</li>
-                <li>✓ <strong>Edit/Tambah Data:</strong> Klik tombol "Edit / Tambah Data" untuk membuka form</li>
-                <li>✓ <strong>Password:</strong> Masukkan <code class="bg-white px-2 py-1 rounded">Santri2026!</code> untuk akses form</li>
-                <li>✓ <strong>Form Input:</strong> Hanya ditampilkan setelah password benar</li>
-                <li>✓ <strong>Tombol Tutup:</strong> Gunakan tombol "Tutup" untuk menutup form dan kembali ke tabel data</li>
+                <li>✓ <strong>Data Progress:</strong> Dapat dilihat oleh semua orang, tidak perlu password</li>
+                <li>✓ <strong>Input / Edit Data:</strong> Klik tombol "Input / Edit Data" untuk membuka form</li>
+                <li>✓ <strong>Password:</strong> <code class="bg-white px-2 py-1 rounded font-mono text-[#1e4680]">Santri2026!</code></li>
+                <li>✓ <strong>Input dengan Enter:</strong> Tekan <strong>Enter</strong> untuk beralih ke kolom input berikutnya</li>
+                <li>✓ <strong>Auto-Calculate:</strong> Progress dan Nilai Akhir dihitung otomatis</li>
+                <li>✓ <strong>Simpan Data:</strong> Klik "Simpan Semua Data" untuk menyimpan (otomatis kembali ke display)</li>
+                <li>✓ <strong>Hapus Baris:</strong> Klik tombol "Hapus" untuk menghapus data</li>
+                <li>✓ <strong>Tambah Baris:</strong> Klik tombol "Tambah Baris" untuk input data baru</li>
             </ul>
         </div>
     </div>
@@ -234,26 +200,363 @@ s    <title>Data Santri - Manajemen Peserta Didik</title>
     <script>
         const PASSWORD = 'Santri2026!';
         let isAuthenticated = false;
+        let dataStorage = JSON.parse(localStorage.getItem('santriData')) || [];
 
+        // Sample Data
+        const sampleData = [
+            {
+                id: 1,
+                namaSantri: 'Ahmad Fauzan',
+                halaqah: 'Halaqah A',
+                targetJuz: 10.0,
+                realisasiJuz: 7.5,
+                murajaah: 85.0,
+                adab: 88.0,
+                kehadiran: 90.0,
+                status: 'On Track',
+                catatan: 'Pertahankan ritme murojaah'
+            },
+            {
+                id: 2,
+                namaSantri: 'Nur Azizah',
+                halaqah: 'Halaqah B',
+                targetJuz: 12.0,
+                realisasiJuz: 10.5,
+                murajaah: 88.0,
+                adab: 90.0,
+                kehadiran: 92.0,
+                status: 'On Track',
+                catatan: 'Sangat baik, teruskan'
+            },
+            {
+                id: 3,
+                namaSantri: 'Muhammad Hasan',
+                halaqah: 'Halaqah A',
+                targetJuz: 8.0,
+                realisasiJuz: 6.0,
+                murajaah: 80.0,
+                adab: 82.0,
+                kehadiran: 85.0,
+                status: 'Sedang',
+                catatan: 'Perlu dorongan ziadah'
+            },
+            {
+                id: 4,
+                namaSantri: 'Siti Fatimah',
+                halaqah: 'Halaqah C',
+                targetJuz: 10.0,
+                realisasiJuz: 8.5,
+                murajaah: 86.0,
+                adab: 87.0,
+                kehadiran: 88.0,
+                status: 'On Track',
+                catatan: 'Progres baik'
+            }
+        ];
+
+        // Inisialisasi data
+        if (dataStorage.length === 0) {
+            dataStorage = JSON.parse(JSON.stringify(sampleData));
+            localStorage.setItem('santriData', JSON.stringify(dataStorage));
+        }
+
+        // Hitung Progress
+        function hitungProgress(targetJuz, realisasiJuz) {
+            if (targetJuz === 0) return 0;
+            return parseFloat(((realisasiJuz / targetJuz) * 100).toFixed(1));
+        }
+
+        // Hitung Nilai Akhir
+        function hitungNilaiAkhir(murajaah, adab, kehadiran) {
+            return parseFloat(((murajaah + adab + kehadiran) / 3).toFixed(1));
+        }
+
+        // Tentukan Predikat
+        function tentukanPredikat(nilaiAkhir) {
+            if (nilaiAkhir >= 90) return 'Imtiyaz';
+            if (nilaiAkhir >= 85) return 'Jayyid Jiddan';
+            if (nilaiAkhir >= 80) return 'Jayyid';
+            if (nilaiAkhir >= 70) return 'Maqbul';
+            return 'Belum Tuntas';
+        }
+
+        // Tentukan Rekomendasi
+        function tentukanRekomendasi(progress, nilaiAkhir) {
+            if (progress < 60) return 'Tingkatkan target hafalan';
+            if (nilaiAkhir < 75) return 'Perlu dorongan ziadah';
+            if (progress >= 80 && nilaiAkhir >= 85) return 'Pertahankan ritme murojaah';
+            return 'Memuaskan, teruskan usaha';
+        }
+
+        // Render Display Mode (Tabel 1)
+        function renderDisplayMode() {
+            const tbody = document.getElementById('tabel1Body');
+            tbody.innerHTML = '';
+
+            dataStorage.forEach((item, index) => {
+                const progress = hitungProgress(item.targetJuz, item.realisasiJuz);
+                const nilaiAkhir = hitungNilaiAkhir(item.murajaah, item.adab, item.kehadiran);
+                const predikat = tentukanPredikat(nilaiAkhir);
+                const rekomendasi = tentukanRekomendasi(progress, nilaiAkhir);
+
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-blue-50 transition';
+                tr.innerHTML = `
+                    <td class="border border-black-200 px-4 py-2 text-center font-semibold text-black-700">${index + 1}</td>
+                    <td class="border border-black-200 px-4 py-2 text-black-700">${item.namaSantri}</td>
+                    <td class="border border-black-200 px-4 py-2 text-center text-black-700">${item.halaqah}</td>
+                    <td class="border border-black-200 px-4 py-2 text-center text-black-700">${item.targetJuz.toFixed(1)}</td>
+                    <td class="border border-black-200 px-4 py-2 text-center text-black-700">${item.realisasiJuz.toFixed(1)}</td>
+                    <td class="border border-black-200 px-4 py-2 text-center">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">${progress.toFixed(1)}%</span>
+                    </td>
+                    <td class="border border-black-200 px-4 py-2 text-center font-semibold text-black-700">${nilaiAkhir.toFixed(1)}</td>
+                    <td class="border border-black-200 px-4 py-2 text-center">
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">${item.status}</span>
+                    </td>
+                    <td class="border border-black-200 px-4 py-2 text-center">
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">${predikat}</span>
+                    </td>
+                    <td class="border border-black-200 px-4 py-2 text-black-700 text-sm">${rekomendasi}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            document.getElementById('totalCount').textContent = dataStorage.length;
+        }
+
+        // Render Input Mode (Tabel 2)
+        function renderInputMode() {
+            const tbody = document.getElementById('tabel2Body');
+            tbody.innerHTML = '';
+
+            dataStorage.forEach((item, index) => {
+                const progress = hitungProgress(item.targetJuz, item.realisasiJuz);
+                const nilaiAkhir = hitungNilaiAkhir(item.murajaah, item.adab, item.kehadiran);
+
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-blue-50 transition input-row';
+                tr.innerHTML = `
+                    <td class="border border-black-200 px-4 py-2 text-center font-semibold text-black-700">${index + 1}</td>
+                    <td class="border border-black-200 px-4 py-2">
+                        <input type="text" class="w-full px-2 py-1 border border-black-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" 
+                            value="${item.namaSantri}" 
+                            data-field="namaSantri" 
+                            data-id="${item.id}"
+                            data-row-index="${index}"
+                            data-col="0"
+                            onkeydown="handleTabKey(event, ${item.id}, 'namaSantri', ${index})">
+                    </td>
+                    <td class="border border-black-200 px-4 py-2">
+                        <select class="w-full px-2 py-1 border border-black-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" 
+                            data-field="halaqah" 
+                            data-id="${item.id}"
+                            data-row-index="${index}"
+                            data-col="1"
+                            onkeydown="handleTabKey(event, ${item.id}, 'halaqah', ${index})">
+                            <option value="Halaqah A" ${item.halaqah === 'Halaqah A' ? 'selected' : ''}>Halaqah A</option>
+                            <option value="Halaqah B" ${item.halaqah === 'Halaqah B' ? 'selected' : ''}>Halaqah B</option>
+                            <option value="Halaqah C" ${item.halaqah === 'Halaqah C' ? 'selected' : ''}>Halaqah C</option>
+                        </select>
+                    </td>
+                    <td class="border border-black-200 px-4 py-2">
+                        <input type="number" step="0.1" class="w-full px-2 py-1 border border-black-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" 
+                            value="${item.targetJuz}" 
+                            data-field="targetJuz" 
+                            data-id="${item.id}"
+                            data-row-index="${index}"
+                            data-col="2"
+                            onchange="updateData(${item.id}, 'targetJuz', this.value); renderInputMode();"
+                            onkeydown="handleTabKey(event, ${item.id}, 'targetJuz', ${index})">
+                    </td>
+                    <td class="border border-black-200 px-4 py-2">
+                        <input type="number" step="0.1" class="w-full px-2 py-1 border border-black-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" 
+                            value="${item.realisasiJuz}" 
+                            data-field="realisasiJuz" 
+                            data-id="${item.id}"
+                            data-row-index="${index}"
+                            data-col="3"
+                            onchange="updateData(${item.id}, 'realisasiJuz', this.value); renderInputMode();"
+                            onkeydown="handleTabKey(event, ${item.id}, 'realisasiJuz', ${index})">
+                    </td>
+                    <td class="border border-black-200 px-4 py-2">
+                        <input type="number" step="0.1" class="w-full px-2 py-1 border border-black-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" 
+                            value="${item.murajaah}" 
+                            data-field="murajaah" 
+                            data-id="${item.id}"
+                            data-row-index="${index}"
+                            data-col="4"
+                            onchange="updateData(${item.id}, 'murajaah', this.value); renderInputMode();"
+                            onkeydown="handleTabKey(event, ${item.id}, 'murajaah', ${index})">
+                    </td>
+                    <td class="border border-black-200 px-4 py-2">
+                        <input type="number" step="0.1" class="w-full px-2 py-1 border border-black-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" 
+                            value="${item.adab}" 
+                            data-field="adab" 
+                            data-id="${item.id}"
+                            data-row-index="${index}"
+                            data-col="5"
+                            onchange="updateData(${item.id}, 'adab', this.value); renderInputMode();"
+                            onkeydown="handleTabKey(event, ${item.id}, 'adab', ${index})">
+                    </td>
+                    <td class="border border-black-200 px-4 py-2">
+                        <input type="number" step="0.1" class="w-full px-2 py-1 border border-black-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" 
+                            value="${item.kehadiran}" 
+                            data-field="kehadiran" 
+                            data-id="${item.id}"
+                            data-row-index="${index}"
+                            data-col="6"
+                            onchange="updateData(${item.id}, 'kehadiran', this.value); renderInputMode();"
+                            onkeydown="handleTabKey(event, ${item.id}, 'kehadiran', ${index})">
+                    </td>
+                    <td class="border border-black-200 px-4 py-2">
+                        <select class="w-full px-2 py-1 border border-black-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" 
+                            data-field="status" 
+                            data-id="${item.id}"
+                            data-row-index="${index}"
+                            data-col="7"
+                            onchange="updateData(${item.id}, 'status', this.value);"
+                            onkeydown="handleTabKey(event, ${item.id}, 'status', ${index})">
+                            <option value="On Track" ${item.status === 'On Track' ? 'selected' : ''}>On Track</option>
+                            <option value="Sedang" ${item.status === 'Sedang' ? 'selected' : ''}>Sedang</option>
+                            <option value="Tertinggal" ${item.status === 'Tertinggal' ? 'selected' : ''}>Tertinggal</option>
+                        </select>
+                    </td>
+                    <td class="border border-black-200 px-4 py-2">
+                        <input type="text" class="w-full px-2 py-1 border border-black-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" 
+                            value="${item.catatan}" 
+                            data-field="catatan" 
+                            data-id="${item.id}"
+                            data-row-index="${index}"
+                            data-col="8"
+                            onkeydown="handleTabKey(event, ${item.id}, 'catatan', ${index})">
+                    </td>
+                    <td class="border border-black-200 px-4 py-2 text-center">
+                        <button onclick="deleteRow(${item.id})" class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-sm font-semibold">🗑️ Hapus</button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Handle Tab/Enter Key Navigation
+        function handleTabKey(event, id, field, rowIndex) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                
+                // Update data terlebih dahulu
+                const input = event.target;
+                updateData(id, field, input.value);
+
+                // Daftar kolom
+                const columns = ['namaSantri', 'halaqah', 'targetJuz', 'realisasiJuz', 'murajaah', 'adab', 'kehadiran', 'status', 'catatan'];
+                const currentColIndex = columns.indexOf(field);
+                const nextColIndex = currentColIndex + 1;
+
+                if (nextColIndex < columns.length) {
+                    // Pindah ke kolom berikutnya di baris yang sama
+                    const nextInput = document.querySelector(`input[data-row-index="${rowIndex}"][data-field="${columns[nextColIndex]}"], select[data-row-index="${rowIndex}"][data-field="${columns[nextColIndex]}"]`);
+                    if (nextInput) {
+                        setTimeout(() => nextInput.focus(), 50);
+                    }
+                } else {
+                    // Pindah ke baris berikutnya, kolom pertama
+                    const nextRow = rowIndex + 1;
+                    if (nextRow < dataStorage.length) {
+                        const nextItem = dataStorage[nextRow];
+                        const firstInputNextRow = document.querySelector(`input[data-row-index="${nextRow}"][data-field="namaSantri"]`);
+                        if (firstInputNextRow) {
+                            setTimeout(() => firstInputNextRow.focus(), 50);
+                        }
+                    }
+                }
+            }
+        }
+
+        // Update Data
+        function updateData(id, field, value) {
+            const item = dataStorage.find(d => d.id === id);
+            if (item) {
+                if (['targetJuz', 'realisasiJuz', 'murajaah', 'adab', 'kehadiran'].includes(field)) {
+                    item[field] = parseFloat(value) || 0;
+                } else {
+                    item[field] = value;
+                }
+            }
+        }
+
+        // Add New Row
+        function addNewRow() {
+            const newId = dataStorage.length > 0 ? Math.max(...dataStorage.map(d => d.id)) + 1 : 1;
+            const newRow = {
+                id: newId,
+                namaSantri: '',
+                halaqah: 'Halaqah A',
+                targetJuz: 0,
+                realisasiJuz: 0,
+                murajaah: 0,
+                adab: 0,
+                kehadiran: 0,
+                status: 'On Track',
+                catatan: ''
+            };
+            dataStorage.push(newRow);
+            renderInputMode();
+        }
+
+        // Delete Row
+        function deleteRow(id) {
+            if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
+                dataStorage = dataStorage.filter(d => d.id !== id);
+                renderInputMode();
+                saveToLocalStorage();
+            }
+        }
+
+        // Save All Data
+        function saveAllData() {
+            saveToLocalStorage();
+            alert('✓ Data berhasil disimpan!');
+            isAuthenticated = false;
+            document.getElementById('inputMode').classList.add('hidden');
+            document.getElementById('displayMode').classList.remove('hidden');
+            renderDisplayMode();
+        }
+
+        // Save to LocalStorage
+        function saveToLocalStorage() {
+            localStorage.setItem('santriData', JSON.stringify(dataStorage));
+        }
+
+        // Open Password Modal
         function openPasswordModal() {
             document.getElementById('passwordModal').classList.remove('hidden');
             document.getElementById('passwordInput').focus();
             document.getElementById('passwordError').classList.add('hidden');
         }
 
+        // Close Password Modal
         function closePasswordModal() {
             document.getElementById('passwordModal').classList.add('hidden');
             document.getElementById('passwordInput').value = '';
             document.getElementById('passwordError').classList.add('hidden');
         }
 
-        function closeInputTable() {
-            isAuthenticated = false;
-            document.getElementById('inputTable').classList.add('hidden');
-            document.getElementById('passwordInput').value = '';
-            document.getElementById('passwordError').classList.add('hidden');
+        // Close Input Mode (Batal)
+        function closeInputMode() {
+            if (confirm('Data yang belum disimpan akan hilang. Lanjutkan?')) {
+                isAuthenticated = false;
+                document.getElementById('inputMode').classList.add('hidden');
+                document.getElementById('displayMode').classList.remove('hidden');
+                document.getElementById('passwordInput').value = '';
+                document.getElementById('passwordError').classList.add('hidden');
+                // Reload data dari localStorage (abaikan perubahan)
+                dataStorage = JSON.parse(localStorage.getItem('santriData')) || sampleData;
+                renderDisplayMode();
+            }
         }
 
+        // Check Password
         function checkPassword() {
             const passwordInput = document.getElementById('passwordInput').value;
             const errorMsg = document.getElementById('passwordError');
@@ -261,9 +564,10 @@ s    <title>Data Santri - Manajemen Peserta Didik</title>
             if (passwordInput === PASSWORD) {
                 isAuthenticated = true;
                 document.getElementById('passwordModal').classList.add('hidden');
-                document.getElementById('inputTable').classList.remove('hidden');
+                document.getElementById('displayMode').classList.add('hidden');
+                document.getElementById('inputMode').classList.remove('hidden');
                 errorMsg.classList.add('hidden');
-                resetForm();
+                renderInputMode();
             } else {
                 errorMsg.classList.remove('hidden');
                 document.getElementById('passwordInput').value = '';
@@ -271,28 +575,16 @@ s    <title>Data Santri - Manajemen Peserta Didik</title>
             }
         }
 
-        function saveData() {
-            if (!isAuthenticated) {
-                alert('Anda harus login terlebih dahulu!');
-                return;
-            }
-            alert('✓ Data berhasil disimpan!');
-            resetForm();
-        }
-
-        function resetForm() {
-            if (!isAuthenticated) return;
-            const inputs = document.querySelectorAll('#inputTable input, #inputTable select');
-            inputs.forEach(input => {
-                input.value = '';
-            });
-        }
-
         // Allow Enter key to submit password
         document.getElementById('passwordInput').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 checkPassword();
             }
+        });
+
+        // Initialize
+        window.addEventListener('DOMContentLoaded', function() {
+            renderDisplayMode();
         });
     </script>
 </body>

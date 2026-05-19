@@ -18,38 +18,63 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body class="overflow-x-hidden pb-28">
     <header
-        class="w-full h-[60vh] bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 flex flex-col relative border-b-4 border-[#1e4680]">
+        class="w-full bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 flex flex-col relative border-b-4 border-[#1e4680]">
 
-        <div class="pt-12 pl-12 flex items-center">
-            <img src="logo.png" alt="Logo" class="w-52 h-52 object-contain">
+        <div class="pt-12 px-4 sm:px-6 lg:px-12 flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8">
+            <img src="logo.png" alt="Logo" class="w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 object-contain">
 
-            <div class="ml-10 text-left">
-                <!-- <h1 c"lass="font-sans font-extrabold uppercase tracking-tighter text-[#D4AF37] text-4xl md:text-5xl leading-tight italic"> -->
-                <h1 class=text-[#D4AF37] text-5xl font-bold uppercase tracking-tighter leading-none">
+            <div class="text-left max-w-3xl">
+                <h1 class="text-[#D4AF37] text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-tighter leading-tight">
                     SELAMAT DATANG DI WEBSITE RESMI<br>
                     PONDOK TAHFIDZ QUR'AN DZU NURAIN
                 </h1>
-                <p class="text-gray-400 text-xl uppercase tracking-[0.5em] mt-4 font-semibold">
+                <p class="text-gray-400 text-base sm:text-lg uppercase tracking-[0.4em] mt-4 font-semibold">
                     KOLAKA TIMUR
                 </p>
             </div>
         </div>
 
-        <nav class="mt-20 w-full flex justify-center text-[#D4AF37]">
-            <ul class="flex space-x-12 text-lg font-bold uppercase tracking-widest">
-                <li><a href="#" class="text-[#D4AF37] border-b border-[#D4AF37] pb-1">Beranda</a></li>
-                <li><a href="program.html" class="text-[#D4AF37] hover:text-white transition duration-300">Program</a></li>
-                <li><a href="jadwal.html" class="text-[#D4AF37] hover:text-white transition duration-300">Jadwal</a></li>
-                <li><a href="agenda.html" class="text-[#D4AF37] hover:text-white transition duration-300">Agenda</a></li>
-                <li><a href="data_santri.html" class="text-[#D4AF37] hover:text-white transition duration-300">Data Santri</a>
-                </li>
-            </ul>
+        <nav class="fixed bottom-0 left-0 right-0 z-50 bg-gray-900 text-gray-200 border-t border-gray-800">
+            <div class="max-w-6xl mx-auto px-4">
+                <ul class="flex justify-between items-center">
+                    <li class="flex-1 text-center">
+                        <a href="index.html" class="flex flex-col items-center justify-center py-3">
+                            <span class="text-2xl">🏠</span>
+                            <span class="text-[11px] mt-1">Beranda</span>
+                        </a>
+                    </li>
+                    <li class="flex-1 text-center">
+                        <a href="program.html" class="flex flex-col items-center justify-center py-3">
+                            <span class="text-2xl">🎓</span>
+                            <span class="text-[11px] mt-1">Program</span>
+                        </a>
+                    </li>
+                    <li class="flex-1 text-center">
+                        <a href="jadwal.html" class="flex flex-col items-center justify-center py-3">
+                            <span class="text-2xl">🕘</span>
+                            <span class="text-[11px] mt-1">Jadwal</span>
+                        </a>
+                    </li>
+                    <li class="flex-1 text-center">
+                        <a href="agenda.html" class="flex flex-col items-center justify-center py-3">
+                            <span class="text-2xl">🗓️</span>
+                            <span class="text-[11px] mt-1">Agenda</span>
+                        </a>
+                    </li>
+                    <li class="flex-1 text-center">
+                        <a href="data_santri.html" class="flex flex-col items-center justify-center py-3">
+                            <span class="text-2xl">👥</span>
+                            <span class="text-[11px] mt-1">Data</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
     </header>
-    <section class="bg-gradient-to-b from-gray-100 to-gray-200 py-20 px-12">
+    <section class="bg-gradient-to-b from-gray-100 to-gray-200 py-16 px-4 sm:px-6 lg:px-12">
         <div class="max-w-6xl mx-auto">
             <h3
                 class="font-sans font-extrabold text-[#D4AF37] text-4xl md:text-5xl uppercase italic mb-8 tracking-tighter">
@@ -63,7 +88,7 @@
                     waktu fajar.</p>
             </div>
 
-            <div class="font-sans text-gray-800 space-y-6 text-lg leading-relaxed text-justify">
+            <div class="font-sans text-gray-800 space-y-6 text-base sm:text-lg leading-relaxed text-justify">
                 <p>
                     Di tengah derasnya arus modernisasi, menjaga identitas sebagai generasi Qur'ani adalah sebuah
                     tantangan sekaligus kemuliaan. <span class="text-[#D4AF37] font-semibold">Pondok Tahfidz Qur'an Dzu
